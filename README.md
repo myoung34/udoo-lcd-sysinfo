@@ -25,6 +25,7 @@ This is an example project for outputting system information from the i.mx6 proc
     * Add that command to ``/etc/rc.local`` to make it permanent.
 
  * Add [this bash script](https://github.com/myoung34/udoo-lcd-sysinfo/blob/master/script/udoo.sh) to ``/usr/local/bin``.
+    * This requires ``ethtool`` if you wish to use it as-is. ``sudo apt-get install ethtool``
     * Set it for startup by adding ``sh /usr/local/bin/udoo.sh | cat > /dev/ttymxc3`` to ``/etc/rc.local``.
     * Add a cron to update it every minute by adding this to ``/etc/crontab``
 
